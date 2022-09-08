@@ -1,0 +1,42 @@
+Algoritmo "MediaDeAlunos"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Descrição   : Algoritmo criado afim de auxiliar nas notas dos alunos.
+// Autor(a)    : Millyana de Souza Silva
+// Data atual  : 24/06/2021
+
+Var
+   // Seção de Declarações das variáveis
+   nome : Caractere
+   notas : vetor[0..5] de real
+   cont : inteiro
+   media, soma: real
+
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   soma <- 0
+   Escreva ("Digite o nome do aluno: ")
+   leia(nome)
+   para cont de 1 ate 5 faça
+      Escreva ("Digite a nota", cont, " do aluno:")
+      leia(notas[cont])
+      soma <- soma + notas[cont]
+   fimpara
+   media <- soma/5
+   Escreval("A média de notas é:", media)
+   se (media >=7) e (media <=10) então
+      Escreval ("O aluno ", nome, " está APROVADO!")
+   senão
+      se (media >=5) e (media <= 6.9) então
+         Escreval ("O aluno ", nome ," está em RECUPERAÇÃO!")
+      Senão
+         Escreval ("O aluno ", nome , " está REPROVADO!")
+   fimse
+      fimse
+
+
+
+
+
+
+Fimalgoritmo
